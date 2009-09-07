@@ -1,0 +1,381 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2009-08-07 10:46+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: atreal.filecart\n"
+
+#: ./portlets/cartportlet.py:98
+msgid "Add Cart Portlet"
+msgstr ""
+
+#. Default: "Add to cart"
+#: ./profiles/default/actions.xml
+msgid "Add to cart"
+msgstr ""
+
+#: ./browser/views.py:29
+msgid "All comments deleted"
+msgstr ""
+
+#: ./browser/controlpanel.py:132
+msgid "Changes canceled."
+msgstr ""
+
+#: ./browser/controlpanel.py:122
+msgid "Changes saved."
+msgstr ""
+
+#. Default: "Clean ALL"
+#: ./browser/controlpanel.pt:256
+msgid "Clean ALL"
+msgstr ""
+
+#: ./browser/controlpanel.py:97
+msgid "Clean all contents"
+msgstr ""
+
+#. Default: "Clear"
+#: ./profiles/default/actions.xml
+msgid "Clear"
+msgstr ""
+
+#. Default: "Clear all comments..."
+#: ./browser/comments.pt:21
+msgid "Clear all comments..."
+msgstr ""
+
+#. Default: "Collapse"
+#: ./browser/controls.pt:8
+msgid "Collapse"
+msgstr ""
+
+#. Default: "Del from cart"
+#: ./profiles/default/actions.xml
+msgid "Del from cart"
+msgstr ""
+
+#. Default: "Delete"
+#: ./profiles/default/actions.xml
+msgid "Delete"
+msgstr ""
+
+#: ./interfaces.py:21
+msgid "Description"
+msgstr ""
+
+#. Default: "Download"
+#: ./profiles/default/actions.xml
+msgid "Download"
+msgstr ""
+
+#. Default: "Download comment"
+#: ./browser/table.pt:172
+msgid "Download comment"
+msgstr ""
+
+#. Default: "Expand"
+#: ./browser/controls.pt:14
+msgid "Expand"
+msgstr ""
+
+#: ./browser/views.py:54
+msgid "File added to cart"
+msgstr ""
+
+#: ./browser/views.py:56
+msgid "File already in cart"
+msgstr ""
+
+#: ./browser/views.py:73
+msgid "File deleted from cart"
+msgstr ""
+
+#: ./browser/views.py:75
+msgid "File not in cart"
+msgstr ""
+
+#. Default: "FileCart"
+#: ./profiles/default/controlpanel.xml
+msgid "FileCart"
+msgstr ""
+
+#. Default: "FileCart Downloads Comments"
+#: ./browser/comments.pt:10
+msgid "FileCart Downloads Comments"
+msgstr ""
+
+#: ./browser/controlpanel.py:77
+msgid "FileCart settings"
+msgstr ""
+
+#: ./browser/controlpanel.py:78
+msgid "FileCart settings for this site."
+msgstr ""
+
+#. Default: "Fill a comment describing why you're downlaoding these elements."
+#: ./browser/table.pt:173
+msgid "Fill a comment describing why you're downlaoding these elements."
+msgstr ""
+
+#: ./interfaces.py:18
+msgid "Integer Id for a Product"
+msgstr ""
+
+#. Default: "Maintenance"
+#: ./browser/controlpanel.pt:227
+msgid "Maintenance"
+msgstr ""
+
+#. Default: "My Cart"
+#: ./profiles/default/actions.xml
+msgid "My Cart"
+msgstr ""
+
+#: ./interfaces.py:20
+msgid "Name"
+msgstr ""
+
+#: ./browser/controlpanel.py:126
+msgid "No changes made."
+msgstr ""
+
+#. Default: "See all comments..."
+#: ./browser/comments.pt:60
+msgid "See all comments..."
+msgstr ""
+
+#: ./interfaces.py:22
+msgid "Size"
+msgstr ""
+
+#: ./portlets/cartportlet.py:99
+msgid "This portlet displays The number of item in your cart and the last item added."
+msgstr ""
+
+#: ./interfaces.py:19
+msgid "Unique Item Id"
+msgstr ""
+
+#. Default: "Update ALL"
+#: ./browser/controlpanel.pt:240
+msgid "Update ALL"
+msgstr ""
+
+#: ./browser/controlpanel.py:81
+msgid "Update all contents"
+msgstr ""
+
+#: ./browser/controlpanel.py:108
+msgid "clean-up on object(s) failed"
+msgstr ""
+
+#. Default: "Clean all datas"
+#: ./browser/controlpanel.pt:250
+msgid "clean_all"
+msgstr ""
+
+#. Default: "Your selection has been correctly added to your Cart."
+#: ./browser/filecart.py:33
+msgid "fc_addok"
+msgstr ""
+
+#. Default: "This element already exists in your Cart."
+#: ./browser/filecart.py:35
+msgid "fc_alreadyexist"
+msgstr ""
+
+#. Default: "Votre cart contient ${size} items !!!"
+#: ./browser/filecart.pt:31
+msgid "fc_cart_size"
+msgstr ""
+
+#. Default: "Cart"
+#: ./browser/filecart.pt:19
+msgid "fc_cart_title"
+msgstr ""
+
+#. Default: "Your selection has been correctly deleted."
+#: ./browser/filecart.py:34
+msgid "fc_deleteok"
+msgstr ""
+
+#. Default: "Your cart is empty. Browse this website to add files to your cart."
+#: ./browser/table.pt:15
+msgid "fc_description_cart_empty"
+msgstr ""
+
+#. Default: "Normally you download your cart with this action."
+#: ./browser/filecart.py:39
+msgid "fc_download"
+msgstr ""
+
+#. Default: "Your cart is now empty."
+#: ./browser/filecart.py:37
+msgid "fc_emptyok"
+msgstr ""
+
+#. Default: "You can choose if you want a pagination in the cart. Choose the number of item of each page (0 is for no pagination)."
+#: ./browser/controlpanel.py:56
+msgid "fc_help_cart_batch_number"
+msgstr ""
+
+#. Default: "This option allows you to show an image preview when you visualize your cart."
+#: ./browser/controlpanel.py:49
+msgid "fc_help_cart_show_preview"
+msgstr ""
+
+#. Default: "Cartable Content delivered through the web/virtually"
+#: ./browser/controlpanel.py:42
+msgid "fc_help_cartable_file_types"
+msgstr ""
+
+#. Default: "Cartable Content delivered through the web/virtually"
+#: ./browser/controlpanel.py:33
+msgid "fc_help_cartable_image_types"
+msgstr ""
+
+#. Default: "Your cart is empty. You can't do this action."
+#: ./browser/filecart.py:38
+msgid "fc_isempty"
+msgstr ""
+
+#. Default: "Cart Batch Number"
+#: ./browser/controlpanel.py:54
+msgid "fc_label_cart_batch_number"
+msgstr ""
+
+#. Default: "Enable Preview in cart ?"
+#: ./browser/controlpanel.py:47
+msgid "fc_label_cart_show_preview"
+msgstr ""
+
+#. Default: "Cartable File Types"
+#: ./browser/controlpanel.py:38
+msgid "fc_label_cartable_file_types"
+msgstr ""
+
+#. Default: "Cartable Image Types"
+#: ./browser/controlpanel.py:29
+msgid "fc_label_cartable_image_types"
+msgstr ""
+
+#. Default: "Your selection is empty. Nothing to delete."
+#: ./browser/filecart.py:32
+msgid "fc_noselection"
+msgstr ""
+
+#. Default: "This element can't be added to your Cart."
+#: ./browser/filecart.py:36
+msgid "fc_notcartable"
+msgstr ""
+
+#. Default: "This element not exists in your Cart."
+#: ./browser/filecart.py:40
+msgid "fc_notincart"
+msgstr ""
+
+#. Default: "${size} item(s) in my cart."
+#: ./portlets/cartportlet.pt:19
+msgid "fc_portlet_cart_size"
+msgstr ""
+
+#. Default: "See my cart..."
+#: ./portlets/cartportlet.pt:42
+msgid "fc_portlet_footer"
+msgstr ""
+
+#. Default: "My cart"
+#: ./portlets/cartportlet.pt:8
+msgid "fc_portlet_my_cart"
+msgstr ""
+
+#. Default: "Last item added :"
+#: ./portlets/cartportlet.pt:23
+msgid "fc_portlet_my_last_item"
+msgstr ""
+
+#. Default: "Return"
+#: ./browser/filecart.pt:23
+msgid "go_to_contentrules_assignment_context"
+msgstr ""
+
+#. Default: "Clicking on this button will clean all download comments, for each supported content of the portal. Be carefull, this operation may take time."
+#: ./browser/controlpanel.pt:251
+msgid "help_clean_all"
+msgstr ""
+
+#. Default: "Clicking on this button will update all contents of the portal supported by this plugin. Be carefull, this operation may take time."
+#: ./browser/controlpanel.pt:235
+msgid "help_update_all"
+msgstr ""
+
+#. Default: "Anonymous User"
+#: ./browser/comments.pt:42
+msgid "label_anonymous_user"
+msgstr ""
+
+#. Default: "Cancel"
+#: ./browser/controlpanel.py:128
+msgid "label_cancel"
+msgstr ""
+
+#. Default: "Collapse viewlet"
+#: ./browser/controls.pt:4
+msgid "label_collapse_viewlet"
+msgstr ""
+
+#. Default: "at"
+#: ./browser/comments.pt:45
+msgid "label_commented_at"
+msgstr ""
+
+#. Default: "Downloaded by"
+#: ./browser/comments.pt:37
+msgid "label_downloaded_by"
+msgstr ""
+
+#. Default: "Expand viewlet"
+#: ./browser/controls.pt:10
+msgid "label_expand_viewlet"
+msgstr ""
+
+#. Default: "Save"
+#: ./browser/controlpanel.py:112
+msgid "label_save"
+msgstr ""
+
+#. Default: "Preview"
+#: ./browser/table.pt:78
+msgid "listingheader_preview"
+msgstr ""
+
+#: ./browser/controlpanel.py:102
+msgid "objects cleaned."
+msgstr ""
+
+#: ./browser/controlpanel.py:86
+msgid "objects updated."
+msgstr ""
+
+#: ./browser/controlpanel.py:92
+msgid "update(s) on object(s) failed"
+msgstr ""
+
+#. Default: "Update all contents"
+#: ./browser/controlpanel.pt:234
+msgid "update_all"
+msgstr ""
+

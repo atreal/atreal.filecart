@@ -1,0 +1,16 @@
+<span tal:condition="not:view/anonymous"
+      class="filecart-controls kssattr-viewlet-filecart kssattr-bodyId-filecartBody kssattr-toggleOnExpand-filecartCollapse kssattr-toggleOnCollapse-filecartExpand"
+      i18n:domain="atreal.filecart">
+    <a href="#" title="Collapse viewlet"
+       id="filecartCollapse"
+       tal:attributes="class string:action collapse ${view/collapsed}"
+       i18n:attributes="title label_collapse_viewlet">
+        <span class="legend" i18n:translate="">Collapse</span>
+    </a>
+    <a href="#" title="Expand viewlet"
+       id="filecartExpand"
+       tal:attributes="class string:action expand ${view/expanded}"
+       i18n:attributes="title label_expand_viewlet">
+        <span class="legend" i18n:translate="">Expand</span>
+    </a>
+</span>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<componentregistry>
+ <adapters/>
+ <utilities>
+  <utility
+     name="atreal.filecart.interfaces.IFileCartSite"
+     component="atreal.filecart.interfaces.IFileCartSite"
+     interface="zope.interface.interfaces.IInterface" />
+  <utility
+     interface="atreal.filecart.interfaces.ICartUtility"
+     factory="atreal.filecart.cart.CartUtility" />
+  <utility
+     interface="zope.app.intid.interfaces.IIntIds"
+     factory="five.intid.intid.IntIds" />
+  <utility
+     interface="atreal.filecart.interfaces.IFileCartMarkerUtility"
+     factory="atreal.filecart.marker.FileCartMarkerUtility" />
+  <utility
+     interface="atreal.filecart.interfaces.IFileCartCommentsUtility"
+     factory="atreal.filecart.comments.FileCartCommentsUtility" />
+ </utilities>
+</componentregistry>

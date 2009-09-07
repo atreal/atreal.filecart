@@ -1,0 +1,69 @@
+<dl class="filecartComments portlet"
+    id="filecart"
+    tal:define="comments view/comments"
+    tal:condition="python:len(comments)>0 and view.canViewComments() and not view.anonymous()"
+    i18n:domain="atreal.filecart">
+
+    <dt id="filecartHeader" class="rfheader portletHeader">
+        <span class="portletTopLeft"></span>
+        <tal:block tal:replace="structure view/controls"/>
+        <span class="title" style="font-weight:bold"
+            i18n:translate="">
+            FileCart Downloads Comments
+        </span>
+
+        <span class="portletTopRight"></span>
+    </dt>
+    
+    <dd id="filecartBody"
+        tal:attributes="class string:filecartbody portletItem odd ${view/collapsed}">
+        
+        <p><a i18n:translate=""
+              href="#"
+              class="filecart-comments-clean-all"
+              tal:condition="view/canDeleteComments">
+                Clear all comments...
+        </a></p>
+
+        <tal:comments>
+            <div class="comment"
+                 tal:repeat="comment comments">
+                <tal:block tal:define="item python:comment[1]">
+                <div class="documentByLine"
+                     tal:define="creator item/user;
+                                 anonymous_creator python:creator in ('Anonymous User', '');
+                                 mi python:not anonymous_creator and view.member_info(creator);
+                                 fullname python: mi and mi['fullname'] or creator;" >
+                    <span i18n:translate="label_downloaded_by">Downloaded by</span>
+                    
+                    <span tal:content="fullname"
+                          tal:condition="not:anonymous_creator">Poster Name</span>
+                    
+                    <span i18n:translate="label_anonymous_user"
+                          tal:condition="anonymous_creator">Anonymous User</span>
+                    
+                    <span i18n:translate="label_commented_at">at</span> 
+                    
+                    <span tal:replace="python:view.format_date(item['date'])">8/23/2001 12:40:44 PM</span>
+                    
+                </div>
+                <div class="commentBody"
+                     tal:condition="python:item['comment']!=''"
+                     tal:content="python:item['comment']">
+                     This is the body text of the comment.
+                </div>
+                </tal:block>
+            </div>
+        </tal:comments>
+        
+        <!-- TO DO : anonymous disables or method available in non kss mode -->
+        <p><a i18n:translate=""
+              tal:condition="python:view.comments_length > 5 and len(comments) < 6 and not view.anonymous()"
+              class="filecart-comments-show-all"
+              href="#">
+                See all comments...
+        </a></p>
+    
+    </dd>
+    
+</dl>

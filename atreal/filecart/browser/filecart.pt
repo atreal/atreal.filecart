@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xml:lang="en" lang="en"
+      i18n:domain="atreal.filecart"
+      metal:use-macro="here/main_template/macros/master">
+
+  <head>
+      <metal:block fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+  </head>
+
+  <body>
+
+    <div metal:fill-slot="main">
+      <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+      <h1 class="documentFirstHeading" i18n:translate="fc_cart_title"> 
+          Cart
+      </h1>
+
+      <a href=""
+         class="link-parent"
+         tal:attributes="href view/getLinkToContext"
+         i18n:translate="go_to_contentrules_assignment_context">
+         Return
+      </a>    
+
+      <p class="documentDescription" i18n:translate="fc_cart_size">
+          Votre cart contient <span tal:content="view/getSize" i18n:name="size" /> items !!!
+      </p>
+
+      <form name="folderContentsForm"
+            method="post"
+            action="folder_object"
+            tal:attributes="action request/URL"
+            class="kssattr-serveraction-cart_update_table">
+        
+        <div tal:replace="structure view/contents_table"></div>
+        
+        <input tal:replace="structure context/@@authenticator/authenticator" />
+      </form>
+    </div>
+
+  </body>
+</html>

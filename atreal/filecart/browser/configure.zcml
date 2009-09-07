@@ -1,0 +1,122 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="atreal.filecart">
+
+
+    <!-- Resources -->
+    <browser:resource
+        name="filecart_icon.png"
+        image="filecart_icon.png"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <browser:resource
+        name="atreal.filecart.kss"
+        file="viewlets.kss"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <browser:resource
+        name="atreal.filecart.css"
+        file="viewlets.css"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <browser:resource
+        name="fc-controls-actions_mapping.png"
+        image="fc-controls-actions_mapping.png"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    
+    <!-- ControlPanel -->
+    <adapter factory=".controlpanel.FileCartControlPanelAdapter" />
+    <browser:page
+        name="filecart-controlpanel"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".controlpanel.FileCartControlPanel"
+        permission="cmf.ManagePortal"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+
+
+    <!-- Browser Views -->
+    <!-- Cart -->
+    <browser:page
+        for="*"
+        name="filecart-cart"
+        class=".filecart.FileCartView"
+        template="filecart.pt"
+        permission="atreal.filecart.UseCart"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <!-- Action Provider -->
+    <browser:page
+        for="*"
+        name="filecart-action"
+        class=".filecart.CartActionProvider"
+        permission="atreal.filecart.UseCart"
+        allowed_attributes="isCartable isInCart"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    
+    <!-- -->
+    <browser:page
+         for="*"
+         class=".filecart.FileCartKSSView"
+         attribute="update_table"
+         name="cart_update_table"
+         permission="cmf.ListFolderContents" />
+
+
+    <!-- Viewlets -->
+    <!-- Download Comments -->
+    <browser:viewlet
+        for="atreal.filecart.interfaces.IFileCartable"
+        name="atreal.filecart.viewlet.comments"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class=".viewlets.FileCartCommentsViewlet"
+        permission="atreal.filecart.ViewComments"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+
+
+    <!-- KSS entries -->
+    <!-- Delete All Download Comments -->
+    <browser:page
+        for="atreal.filecart.interfaces.IFileCartable"
+        name="cleanAllFileCartComments"
+        attribute="cleanAllComments"
+        class=".views.FileCartableView"
+        permission="atreal.filecart.DeleteComments"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <!-- Show All Download Comments -->
+    <browser:page
+        for="atreal.filecart.interfaces.IFileCartable"
+        name="showAllFileCartComments"
+        attribute="showAllComments"
+        class=".views.FileCartableView"
+        permission="atreal.filecart.ViewComments"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <!-- Add Object To Cart -->
+    <browser:page
+        for="atreal.filecart.interfaces.IFileCartable"
+        name="addObjectToFileCart"
+        attribute="addObjectToCart"
+        class=".views.FileCartableView"
+        permission="atreal.filecart.UseCart"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+    <!-- Del Object From Cart -->
+    <browser:page
+        for="atreal.filecart.interfaces.IFileCartable"
+        name="delObjectFromFileCart"
+        attribute="delObjectFromCart"
+        class=".views.FileCartableView"
+        permission="atreal.filecart.UseCart"
+        layer="atreal.filecart.interfaces.IFileCartLayer"
+        />
+
+
+</configure>

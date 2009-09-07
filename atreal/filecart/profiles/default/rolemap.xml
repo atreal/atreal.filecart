@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission name="atreal.filecart: Use Cart"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Authenticated"/>
+    </permission>
+    <permission name="atreal.filecart: View Download Comments"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Authenticated"/>
+    </permission>
+    <permission name="atreal.filecart: Delete Download Comments"
+                acquire="True">
+      <role name="Manager"/>
+    </permission>
+  </permissions>
+</rolemap> 

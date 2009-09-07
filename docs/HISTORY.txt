@@ -1,0 +1,19 @@
+=============================
+Changelog for atreal.filecart
+=============================
+(name of developer listed in brackets)
+
+
+Version 1.0.0beta1 - 2009-09-07
+---------------------------
+    - First Public Release
+      [Florent Michon]
+
+Version 0.1.0 - Unreleased
+---------------------------
+    - First development.
+      [Florent Michon]
+    
+    - Initial package structure.
+      [zopeskel]
+

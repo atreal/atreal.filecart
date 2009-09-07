@@ -1,0 +1,110 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="atreal.filecart">
+    
+    
+    <!-- -->
+    <include package="five.intid" file="base.zcml" />
+    <include package="atreal.override.albumview" />
+    
+    
+    <!-- -->
+    <five:registerPackage package="." initialize=".initialize" />
+    
+    
+    <!-- Permissions -->
+    <permission
+	id="atreal.filecart.UseCart"
+	title="atreal.filecart: Use Cart"
+	/>
+    <permission
+	id="atreal.filecart.ViewComments"
+	title="atreal.filecart: View Download Comments"
+	/>
+    <permission
+	id="atreal.filecart.DeleteComments"
+	title="atreal.filecart: Delete Download Comments"
+	/>
+    
+    
+    <!-- -->
+    <include package=".browser" />
+    <include package=".portlets" />
+    
+    
+    <!-- -->
+    <adapter
+       for=".interfaces.ICart"
+       provides=".interfaces.ILineItemFactory"
+       factory=".content.LineItemFactory"
+       />
+    
+    
+    <!-- -->
+    <subscriber
+       handler="five.intid.intid.addIntIdSubscriber"
+       for="Products.CMFCore.interfaces.IDynamicType
+            zope.app.container.interfaces.IObjectAddedEvent"
+        />
+    <subscriber
+        handler="five.intid.intid.removeIntIdSubscriber"
+        for="Products.CMFCore.interfaces.IDynamicType
+             zope.app.container.interfaces.IObjectRemovedEvent"
+        />
+    <subscriber
+        handler="five.intid.intid.moveIntIdSubscriber"
+        for="Products.CMFCore.interfaces.IDynamicType
+             zope.app.container.interfaces.IObjectMovedEvent"
+        />
+
+
+    <!-- Adapter to mark object with interface -->
+    <adapter
+        for="Products.ATContentTypes.interface.interfaces.IATContentType"
+	factory=".marker.FileCartMarker"
+	provides=".interfaces.IFileCartMarker"
+        />
+
+    
+    <!-- Event Subscriber to mark object with interface -->
+    <subscriber
+        for="Products.ATContentTypes.interface.interfaces.IATContentType
+             zope.lifecycleevent.IObjectCreatedEvent"
+        handler=".events.markObject"
+        />
+
+
+    <!-- Adapter to comment download -->
+    <adapter
+        for=".interfaces.IFileCartable"
+        factory=".comments.FileCartComments"
+        provides=".interfaces.IFileCartComments"
+       />
+
+    
+    <!-- Adapter to manage cartable -->
+    <adapter
+        for=".interfaces.IFileCartable"
+        factory=".cart.FileCartProvider"
+        provides=".interfaces.IFileCartProvider"
+       />
+
+
+    <!-- Translations -->
+    <i18n:registerTranslations directory="locales"/>
+
+
+    <!-- Register profile to genericsetup -->
+    <genericsetup:registerProfile
+        name="FileCart"
+        title="FileCart"
+        directory="profiles/default"
+        description="Package to select files and download them via a cart."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    
+</configure>

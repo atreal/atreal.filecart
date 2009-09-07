@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1.0.0beta1</version>
+  <dependencies>
+    <dependency>profile-atreal.override.albumview:default</dependency>
+  </dependencies>
+</metadata>

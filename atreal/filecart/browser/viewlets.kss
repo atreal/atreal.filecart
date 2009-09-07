@@ -1,0 +1,110 @@
+/* Stuffs to collapse and expand comments viewlet */
+#filecart a.action.collapse:click {
+    evt-click-preventdefault:               true;
+    action-client:                          toggleClass htmlid(kssAttr(toggleOnCollapse, True)) alias(toggleAction);
+    toggleAction-value:                     filecartcollapsed;
+    action-client:                          toggleClass htmlid(kssAttr(bodyId, True)) alias(toggleBody);
+    toggleBody-value:                       filecartcollapsed;
+    action-client:                          toggleClass;
+    toggleClass-value:                      filecartcollapsed;
+}
+#filecart a.action.expand:click {
+    evt-click-preventdefault:               true;
+    action-client:                          toggleClass htmlid(kssAttr(toggleOnExpand, True)) alias(toggleAction);
+    toggleAction-value:                     filecartcollapsed;
+    action-client:                          toggleClass htmlid(kssAttr(bodyId, True)) alias(toggleBody);
+    toggleBody-value:                       filecartcollapsed;
+    action-client:                          toggleClass;
+    toggleClass-value:                      filecartcollapsed;
+}
+
+
+/* Stuffs to show and delete comments in comments viewlet */
+#filecart a.filecart-comments-clean-all:click {
+    evt-click-preventdefault:               true;
+    action-server:                          cleanAllFileCartComments;
+}
+#filecart a.filecart-comments-show-all:click {
+    evt-click-preventdefault:               true;
+    action-server:                          showAllFileCartComments;
+}
+
+
+/* Stuffs to add and delete from cart in document_actions */
+#document-action-addtocart a:click {
+    evt-click-preventdefault:               true;
+    action-server:                          addObjectToFileCart;
+}
+#document-action-delfromcart a:click {
+    evt-click-preventdefault:               true;
+    action-server:                          delObjectFromFileCart;
+}
+
+
+/* Folder contents stuff */
+body:load { 
+    action-client: plone-initShiftDetection;
+}
+
+#folderlisting-main-table input[type="checkbox"]:change {
+    action-client: plone-createCheckBoxSelection;
+    plone-createCheckBoxSelection-group: 'table.listing input[type="checkbox"]';
+}
+
+
+#folderlisting-main-table input[type="checkbox"]:change {
+    action-client: toggleClass;
+    toggleClass-kssSelector: parentnode("table.listing tbody tr");
+    toggleClass-classname: "selected";
+}
+
+/* Generic setup which (made more specific by other rules) */
+.cart-update-selection:click {
+    action-server:  update_table url(kssAttr("serveraction", true));
+    evt-click-preventdefault: True;
+    update_table-pagenumber: currentFormVar('pagenumber');
+    update_table-show_all: currentFormVar('show_all');
+    update_table-sort_on: currentFormVar('sort_on');
+}
+
+#cartcontents-show-batched:click {
+    update_table-show_all: "false";
+} 
+
+#cartcontents-show-all:click {
+    update_table-show_all: "true";
+    update_table-pagenumber: "1";
+} 
+
+#cartcontents-title-column:click {
+    update_table-sort_on: "sortable_title";
+} 
+
+#cartcontents-modified-column:click {
+    update_table-sort_on: "modified";
+} 
+
+#cartcontents-status-column:click {
+    update_table-sort_on: "review_state";
+} 
+
+#cartcontents-selectall:click {
+    update_table-select: 'screen';
+} 
+
+#cartcontents-selectall-completebatch:click {
+    update_table-select: 'all';
+} 
+
+#cartcontents-clearselection:click {
+    update_table-select: 'none';
+} 
+
+#folderlisting-main-table:load { 
+    action-client: plone-initDragAndDrop;
+    plone-initDragAndDrop-table: '#listing-table';
+}
+
+#folderlisting-main-table:load { 
+    action-client: plone-initCheckBoxSelection;
+}

@@ -1,0 +1,51 @@
+<dl class="portlet portletCartPortlet"
+    i18n:domain="atreal.filecart"
+    tal:condition="view/available">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span>
+        <a href="" class="tile"
+           tal:attributes="href view/getLinkToCart"
+           i18n:translate="fc_portlet_my_cart">
+           My cart
+           </a>
+        </span>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem odd">
+        <div class="cart-size" i18n:translate="fc_portlet_cart_size">
+            <span tal:content="view/getSize" i18n:name="size" /> item(s) in my cart.
+        </div>
+        <div class="cart-last-item"
+             tal:condition="view/getLastElement">
+            <span i18n:translate="fc_portlet_my_last_item">
+             Last item added :
+            </span>
+            <a href=""
+               tal:attributes="title view/lastitembrain/Description;
+                               href string:resolveuid/${view/lastitembrain/UID}/view">
+                <tal:thumb condition="view/lastitemthumb">
+                    <img tal:attributes="src string:${view/lastitemthumb}" />
+                    <br />
+                </tal:thumb>
+                <span tal:content="view/lastitembrain/Title"></span>
+            </a>
+        </div>
+
+    </dd>
+
+    <dd class="portletFooter">
+        <span class="portletBotomLeft"></span>
+        <span>
+        <a href=""
+           tal:attributes="href view/getLinkToCart"
+           i18n:translate="fc_portlet_footer">
+           See my cart...
+           </a>
+        </span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>
