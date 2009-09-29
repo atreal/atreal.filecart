@@ -3,13 +3,13 @@
       i18n:domain="atreal.filecart">
     <a href="#" title="Collapse viewlet"
        id="filecartCollapse"
-       tal:attributes="class string:action collapse ${view/collapsed}"
+       tal:attributes="class string:action fccollapse ${view/collapsed}"
        i18n:attributes="title label_collapse_viewlet">
         <span class="legend" i18n:translate="">Collapse</span>
     </a>
     <a href="#" title="Expand viewlet"
        id="filecartExpand"
-       tal:attributes="class string:action expand ${view/expanded}"
+       tal:attributes="class string:action fcexpand ${view/expanded}"
        i18n:attributes="title label_expand_viewlet">
         <span class="legend" i18n:translate="">Expand</span>
     </a>

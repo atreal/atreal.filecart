@@ -44,11 +44,11 @@
     background-position:0 0;
 }
 
-.filecart-controls a.action.expand {
+.filecart-controls a.action.fcexpand {
     background-position:-12px 0;
 }
 
-.filecart-controls a.action.collapse {
+.filecart-controls a.action.fccollapse {
     background-position:-24px 0;
 }
 
@@ -64,11 +64,11 @@
     background-position:0 -12px;
 }
 
-.filecart-controls a.action.expand:hover {
+.filecart-controls a.action.fcexpand:hover {
     background-position:-12px -12px;
 }
 
-.filecart-controls a.action.collapse:hover {
+.filecart-controls a.action.fccollapse:hover {
     background-position:-24px -12px;
 }
 

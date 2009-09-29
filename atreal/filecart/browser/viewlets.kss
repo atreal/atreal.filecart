@@ -1,5 +1,5 @@
 /* Stuffs to collapse and expand comments viewlet */
-#filecart a.action.collapse:click {
+#filecart a.action.fccollapse:click {
     evt-click-preventdefault:               true;
     action-client:                          toggleClass htmlid(kssAttr(toggleOnCollapse, True)) alias(toggleAction);
     toggleAction-value:                     filecartcollapsed;
@@ -8,7 +8,7 @@
     action-client:                          toggleClass;
     toggleClass-value:                      filecartcollapsed;
 }
-#filecart a.action.expand:click {
+#filecart a.action.fcexpand:click {
     evt-click-preventdefault:               true;
     action-client:                          toggleClass htmlid(kssAttr(toggleOnExpand, True)) alias(toggleAction);
     toggleAction-value:                     filecartcollapsed;

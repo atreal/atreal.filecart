@@ -3,6 +3,10 @@ Changelog for atreal.filecart
 =============================
 (name of developer listed in brackets)
 
+Version 1.0.0beta2 - 2009-09-29
+---------------------------
+    - Bug Fix : Compatibility with kss actions of richfile plugins.
+      [Florent Michon]
 
 Version 1.0.0beta1 - 2009-09-07
 ---------------------------
