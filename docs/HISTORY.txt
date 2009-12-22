@@ -3,6 +3,12 @@ Changelog for atreal.filecart
 =============================
 (name of developer listed in brackets)
 
+Version 1.0.0rc1 - 2009-12-22
+-----------------------------
+    - Bug Fix : Portlet was shown empty when not available. Now he's not shown.
+      Property decorator is necessary on available method.
+      [Florent Michon]
+
 Version 1.0.0beta2 - 2009-09-29
 ---------------------------
     - Bug Fix : Compatibility with kss actions of richfile plugins.

@@ -53,6 +53,7 @@ class Renderer(base.Renderer, CartProvider):
     lastitembrain = None
     lastitemthumb = None
     
+    @property
     def available(self):
         # Use portal_membership tool for checking permissions
         mtool = self.context.portal_membership
